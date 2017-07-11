@@ -2,19 +2,37 @@
 
 class game_board:
 	board_values = {'top-L':'','top-M':'','top-R':'','low-L':'','low-M':'','low-R':'','mid-L':'','mid-M':'','mid-R':''}	
+	player = {'X':'', 'O': ''}
 
 	def __init__(self,player_1,player_2):
-		self.player_1 = player_1
-		self.player_2 = player_2
+		self.player['X'] = player_1
+		self.player['O'] = player_2
 
 
-	def display():
-		print(board['topL'] + '|' + board['top-M'] + '|' + board['top-R'])
+	def display(self):
+		print(board_values['top-L'] + '|' + board_values['top-M'] + '|' + board_values['top-R'])
     	print('-+-+-')
-    	print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+    	print(board_values['mid-L'] + '|' + board_values['mid-M'] + '|' + board_values['mid-R'])
     	print('-+-+-')
-    	print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+    	print(board_values['low-L'] + '|' + board_values['low-M'] + '|' + board_values['low-R'])
 
+    def add_X(self,value):
+    	
+    	self.value = value
+    	keys = board_values.keys()
+
+    	for key in keys:
+    		if key == value:
+    			board_values[key] = 'X'
+
+    def add_O(self,value):
+
+    	self.value = value 
+    	keys = board_values.key()
+
+    	for key in keys:
+    		if key == value:
+    			board_values[key] = 'O'
 
 
 def main():
