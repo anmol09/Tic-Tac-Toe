@@ -207,9 +207,3 @@ if __name__ == '__main__':
   main()
 
 
-
-
-
-
-# Diagnosis Code: 300
-# Service Code: A007
