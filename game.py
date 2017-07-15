@@ -1,8 +1,9 @@
 
 
 class game_board:
-	board_values = {'top-L':'','top-M':'','top-R':'','low-L':'','low-M':'','low-R':'','mid-L':'','mid-M':'','mid-R':''}	
-	player = {'X':'', 'O': ''}
+
+	board_values = {1:'', 2 : '' , 3: '', 4: '', 5: '', 6: '', 7: '', 8: '', 9: ''}
+	#player = {'X':'', 'O': ''}
 
 	def __init__(self,player_1,player_2):
 		self.player['X'] = player_1
@@ -10,29 +11,28 @@ class game_board:
 
 
 	def display(self):
-		print(board_values['top-L'] + '|' + board_values['top-M'] + '|' + board_values['top-R'])
-    	print('-+-+-')
-    	print(board_values['mid-L'] + '|' + board_values['mid-M'] + '|' + board_values['mid-R'])
-    	print('-+-+-')
-    	print(board_values['low-L'] + '|' + board_values['low-M'] + '|' + board_values['low-R'])
+		print(game_board.board_values[1] + '|' + game_board.board_values[2] + '|' + game_board.board_values[3])
+		print('-+-+-')
+		print(game_board.board_values[4] + '|' + game_board.board_values[5] + '|' + game_board.board_values[6])
+		print('-+-+-')
+		print(game_board.board_values[7] + '|' + game_board.board_values[8] + '|' + game_board.board_values[9])
 
-    def add_X(self,value):
-    	
-    	self.value = value
-    	keys = board_values.keys()
+	def add_X(self,value):
+		self.value = value
+		keys = game_board.board_values.key()
 
-    	for key in keys:
-    		if key == value:
-    			board_values[key] = 'X'
+		for key in keys:
+			if key == value:
+				game_board.board_values[key] = 'X'
+	
+	def add_O(self,value):
+		
+		self.value = value 
+		keys = game_board.board_values.key()
 
-    def add_O(self,value):
-
-    	self.value = value 
-    	keys = board_values.key()
-
-    	for key in keys:
-    		if key == value:
-    			board_values[key] = 'O'
+		for key in keys:
+			if key == value:
+				game_board.board_values[key] = 'O'
 
 
 def main():
@@ -41,12 +41,17 @@ def main():
 	player_1 = input("Name player which wants 'X'")
 	player_2 = input("Name player which wants 'O'")
 
+
+
 	board_game = game_board(player_1,player_2)
 
 
 
+main()
+#def game_logic():
 
-def game_logic():
 
+#def print_instructions():
 
-def print_instructions():
+# Diagnosis Code: 300
+# Service Code: A007
